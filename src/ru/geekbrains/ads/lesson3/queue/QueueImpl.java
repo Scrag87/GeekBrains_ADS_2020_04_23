@@ -9,8 +9,8 @@ public class QueueImpl<E> implements Queue<E> {
     protected final E[] data;
     protected int size;
 
-    private int tail;
-    private int head;
+    protected int tail;
+    protected int head;
 
     @SuppressWarnings("unchecked")
     public QueueImpl(int maxSize) {
@@ -27,7 +27,6 @@ public class QueueImpl<E> implements Queue<E> {
 
         if (tail == lastIndex()) {
             tail = DEFAULT_TAIL;
-            return false;
         }
 
         data[++tail] = value;
