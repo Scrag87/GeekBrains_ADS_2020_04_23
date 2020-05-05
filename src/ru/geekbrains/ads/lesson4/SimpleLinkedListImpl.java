@@ -1,5 +1,7 @@
 package ru.geekbrains.ads.lesson4;
 
+import java.util.Iterator;
+
 public class SimpleLinkedListImpl<E> implements LinkedList<E> {
 
     protected Entry<E> firstElement;//001[005]
@@ -88,5 +90,10 @@ public class SimpleLinkedListImpl<E> implements LinkedList<E> {
     @Override
     public Entry<E> getFirstElement() {
         return firstElement;
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new ListIterator(firstElement);
     }
 }

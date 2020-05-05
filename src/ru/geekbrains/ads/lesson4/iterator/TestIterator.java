@@ -47,7 +47,7 @@ public class TestIterator {
         linkedList.insertFirst(1);
 
         for (java.lang.Object o : linkedList) {
-
+            System.out.println(o);
         }
 
         LinkedList.Entry<Integer> current = linkedList.getFirstElement();

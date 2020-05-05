@@ -1,6 +1,6 @@
 package ru.geekbrains.ads.lesson4;
 
-public interface LinkedList<E> {
+public interface LinkedList<E> extends Iterable<E> {
 
     //O(1)
     void insertFirst(E value);
@@ -30,6 +30,13 @@ public interface LinkedList<E> {
     class Entry<E> {
         public E value;
         public Entry<E> next;
+
+        @Override
+        public String toString() {
+            return "Entry{" +
+                "value=" + value +
+                '}';
+        }
 
         public Entry(E value) {
             this.value = value;
